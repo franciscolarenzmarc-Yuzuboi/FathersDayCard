@@ -302,6 +302,17 @@ body::after  { bottom: 28px; }
   object-fit: cover;
 }
 
+/* Dad's center photo — slightly larger with gold ring */
+.photo-center {
+  width: 116px;
+  height: 116px;
+  border: 3px solid var(--gold);
+  border-style: solid;
+  box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.25);
+  transform: translateY(-6px);
+  z-index: 1;
+}
+
 /* ── Message display area ── */
 .message {
   font-family: 'Playfair Display', serif;
