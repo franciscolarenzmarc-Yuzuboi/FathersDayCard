@@ -69,7 +69,7 @@ body::after  { bottom: 28px; }
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-  filter: drop-shadow(0 40px 70px rgba(0, 0, 0, 0.60));
+  /* NOTE: filter: drop-shadow removed — CSS filters break preserve-3d and cause mirrored text */
 }
 
 .card.open {
@@ -83,6 +83,8 @@ body::after  { bottom: 28px; }
   border-radius: 18px;
   overflow: hidden;
   backface-visibility: hidden;
+  /* Shadow applied here instead of on .card to preserve 3D flip */
+  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.60);
   -webkit-backface-visibility: hidden;
 }
 
